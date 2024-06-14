@@ -38,3 +38,13 @@ test("Reverse a string", () => {
 test("Reverse with punctuations", () => {
   expect(reverseString("?hello@")).toBe("@olleh?");
 });
+
+// analyze Array test
+test("Analyze an array and return the average,min,max value and length of array", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});

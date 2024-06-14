@@ -24,11 +24,15 @@ const calculator = {
 };
 
 function analyzeArray(array) {
+  let minValue = Math.min(...array);
+  let maxValue = Math.max(...array);
+  let arrayLength = array.length;
+  let arrayAverage = array.reduce((prev, curr) => prev + curr, 0) / arrayLength;
   return {
-    average,
-    min,
-    max,
-    length,
+    average: arrayAverage,
+    min: minValue,
+    max: maxValue,
+    length: arrayLength,
   };
 }
 
