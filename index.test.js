@@ -3,6 +3,7 @@ const {
   reverseString,
   calculator,
   analyzeArray,
+  caesarCipher,
 } = require("./index.js");
 
 // calculator test
@@ -47,4 +48,33 @@ test("Analyze an array and return the average,min,max value and length of array"
     max: 8,
     length: 6,
   });
+});
+
+test("analyze the min value", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).min).toBe(1);
+});
+
+test("analyze the max value", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).max).toBe(8);
+});
+
+test("analyze the length", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).length).toBe(6);
+});
+
+test("analyze the average", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6]).average).toBe(4);
+});
+
+// caesarCipher(string, number) test suits
+test("String xyz should return abc", () => {
+  expect(caesarCipher("xyz", 3)).toBe("abc");
+});
+
+test("caesarCipher case preservation", () => {
+  expect(caesarCipher("heLLo", 3)).toBe("khOOr");
+});
+
+test("caesarCipher punctuation preservation", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });

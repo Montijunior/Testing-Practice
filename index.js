@@ -36,4 +36,28 @@ function analyzeArray(array) {
   };
 }
 
-module.exports = { capitalize, reverseString, calculator, analyzeArray };
+function caesarCipher(str, key) {
+  return str
+    .split("")
+    .map((char) => {
+      if (char.match(/[a-zA-Z]/)) {
+        let code = char.charCodeAt(0);
+        let base = code >= 65 && code <= 90 ? 65 : 97;
+
+        let shiftedCode = ((code - base + key + 26) % 26) + base;
+
+        return String.fromCharCode(shiftedCode);
+      } else {
+        return char;
+      }
+    })
+    .join("");
+}
+
+module.exports = {
+  capitalize,
+  reverseString,
+  calculator,
+  analyzeArray,
+  caesarCipher,
+};
