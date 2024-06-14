@@ -21,3 +21,12 @@ test("Calculator divides", () => {
 test("Calculator multiplies", () => {
   expect(calculator.multiply(2, 3)).toBe(6);
 });
+
+// capitalize
+test("Capitalize first character", () => {
+  expect(capitalize("hello")).toBe("Hello");
+});
+
+test("Already Capitalize", () => {
+  expect(capitalize("James")).toBe("James");
+});
