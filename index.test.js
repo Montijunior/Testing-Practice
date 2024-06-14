@@ -30,3 +30,11 @@ test("Capitalize first character", () => {
 test("Already Capitalize", () => {
   expect(capitalize("James")).toBe("James");
 });
+
+// reverseString test
+test("Reverse a string", () => {
+  expect(reverseString("Hello")).toBe("olleH");
+});
+test("Reverse with punctuations", () => {
+  expect(reverseString("?hello@")).toBe("@olleh?");
+});

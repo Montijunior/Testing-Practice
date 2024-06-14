@@ -4,7 +4,9 @@ function capitalize(string) {
   return array.join("");
 }
 
-function reverseString(string) {}
+function reverseString(string) {
+  return string.split("").reverse().join("");
+}
 
 const calculator = {
   add(a, b) {
